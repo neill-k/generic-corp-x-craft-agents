@@ -1,0 +1,29 @@
+{
+  "name": "@craft-agent/orchestration",
+  "version": "0.3.4",
+  "license": "Apache-2.0",
+  "description": "Multi-agent orchestration engine for Craft Agents",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "bun test",
+    "test:watch": "bun test --watch"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./engine": "./src/engine.ts",
+    "./storage": "./src/storage/index.ts",
+    "./mcp": "./src/mcp/server.ts",
+    "./types": "./src/types.ts",
+    "./events": "./src/events.ts",
+    "./prompt-builder": "./src/prompt-builder.ts"
+  },
+  "dependencies": {
+    "@craft-agent/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.2.19",
+    "zod": ">=3.0.0"
+  }
+}
